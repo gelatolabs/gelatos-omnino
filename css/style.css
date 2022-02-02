@@ -85,6 +85,10 @@ body {
     font-family: Go, Arial, Helvetica, sans-serif;
 }
 
+code, kbd, pre, samp, tt, var {
+    font-family: Go-Mono;
+}
+
 img {
     max-width: 100%;
 }

@@ -1,0 +1,90 @@
+@font-face {
+    font-family: Go;
+    src: url("/font/Go-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Go;
+    src: url("/font/Go-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Go;
+    src: url("/font/Go-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: Go;
+    src: url("/font/Go-Bold-Italic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Go-Medium;
+    src: url("/font/Go-Medium.ttf");
+}
+@font-face {
+    font-family: Go-Medium;
+    src: url("/font/Go-Medium-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: Go-Mono;
+    src: url("/font/Go-Mono.ttf");
+}
+@font-face {
+    font-family: Go-Mono;
+    src: url("/font/Go-Mono-Bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: Go-Mono;
+    src: url("/font/Go-Mono-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: Go-Mono;
+    src: url("/font/Go-Mono-Bold-Italic.ttf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Go-Smallcaps;
+    src: url("/font/Go-Smallcaps.ttf");
+}
+@font-face {
+    font-family: Go-Smallcaps;
+    src: url("/font/Go-Smallcaps-Italic.ttf");
+    font-style: italic;
+}
+
+:root {
+    --omnino-title: "GelatOS";
+    --omnino-background-color: #131516;
+    --omnino-window-background: #131516;
+    --omnino-window-fgcolor: #fffafa;
+    --omnino-menu-background: #131516;
+    --omnino-menu-fgcolor: #00ff00;
+    --omnino-link-hover-color: #00ff00;
+    --omnino-link-active-color: #00ff00;
+    --omnino-handle-color: #00ff00;
+    --omnino-border-color: #00ff00;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--omnino-window-background);
+    color: var(--omnino-window-fgcolor);
+    font-family: Go, Arial, Helvetica, sans-serif;
+}
+
+img {
+    max-width: 100%;
+}

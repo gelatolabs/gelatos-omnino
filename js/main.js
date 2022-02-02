@@ -1,3 +1,13 @@
+function queryVar(v) {
+    var vars = window.location.search.substring(1).split("&");
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split("=");
+        if (decodeURIComponent(pair[0]) == v) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+}
+
 window.addEventListener("load", () => {
     const setup = (app, elts, title) => {
         // Move the elements to a top-level div to simplify cloning.
@@ -49,4 +59,17 @@ window.addEventListener("load", () => {
     console.assert(body);
     const elts = removeElements(body);
     const app = setup(omnino.install(body), elts, document.title);
+
+    var rs = document.querySelector(":root").style;
+    if (queryVar("theme") == "acme") {
+        rs.setProperty("--omnino-background-color", "#fff");
+        rs.setProperty("--omnino-window-background", "#ffffea");
+        rs.setProperty("--omnino-window-fgcolor", "#000");
+        rs.setProperty("--omnino-menu-background", "#eaffff");
+        rs.setProperty("--omnino-menu-fgcolor", "#000");
+        rs.setProperty("--omnino-link-hover-color", "#8888cc");
+        rs.setProperty("--omnino-link-active-color", "#8888cc");
+        rs.setProperty("--omnino-handle-color", "#8888cc");
+        rs.setProperty("--omnino-border-color", "#000");
+    }
 });
